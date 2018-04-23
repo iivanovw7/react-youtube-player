@@ -1,0 +1,32 @@
+html {
+  background: #0e1a25;
+  font-size: 0.625em; }
+
+.container {
+  max-width: 768px;
+  margin: 0 auto; }
+  .container--fluid {
+    margin: 0;
+    max-width: 100%; }
+  .container__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+
+.container {
+  background-color: #88d8b0;
+  padding: 10px;
+  box-sizing: border-box; }
+  .container__row {
+    background-color: #ffeead; }
+
+.row-element {
+  width: 150px;
+  height: 30px;
+  background-color: #ff6f69;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+/*# sourceMappingURL=background.css.map */
