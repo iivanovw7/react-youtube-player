@@ -17,17 +17,16 @@ class App extends Component {
         this.state = {
             videos: [],
             selectedVideo: null,
-            maxResults: 12,
 
 
         };
 
-        this.videoSearch('surfboards');
-        console.log(this.props.maxResults);
+        this.videoSearch('surfboards', 6);
+        //console.log(this.props.maxResults);
 
     }
 
-    videoSearch(term) {
+    videoSearch(term, maxResults) {
 
         /*
 
@@ -43,7 +42,7 @@ class App extends Component {
 
          */
 
-        fetchVideos({key: API_KEY, term: term, maxResults: this.state.maxResults}, (videos) => {
+        fetchVideos({key: API_KEY, term: term, maxResults: maxResults}, (videos) => {
             this.setState({
                 videos: videos,
                 selectedVideo: videos[0]
@@ -57,13 +56,13 @@ class App extends Component {
 
     }
 
-    onInputChange(value) {
-        this.setState ({maxResults: value})
-    }
+
+
+
 
     render() {
-        const videoSearch = _.debounce((term) => {
-            this.videoSearch(term)
+        const videoSearch = _.debounce((term, maxResults) => {
+            this.videoSearch(term, maxResults)
         }, 300);
 
 
@@ -73,14 +72,6 @@ class App extends Component {
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                     videos={this.state.videos}/>
                 <SearchBar onSearchTermChange={videoSearch}/>
-                <div>
-                    <input
-                        value={this.state.maxResults}
-                        onChange={event => this.onInputChange(event.target.value)}/>
-                    <div>
-                        Value of the input: {this.state.maxResults}
-                    </div>
-                </div>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
@@ -100,3 +91,13 @@ class App extends Component {
 }
 
 ReactDOM.render(<App/>, document.querySelector('.container'));
+
+
+/*
+
+ <div>
+                    <input
+                        value={this.state.maxResults}
+                        onChange={event => this.onInputChange(event.target.value)}/>
+                </div>
+ */

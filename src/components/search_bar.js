@@ -8,18 +8,29 @@ class SearchBar extends React.Component {
         super(props);
 
 
-        this.state = {term: ''}
+        this.state = {
+            term: '',
+            maxResults: 6
+        }
+
+
     }
 
 
     render() {
         return (
-            <div className="search-bar">
-                <input
-                    value={this.state.term}
-                    onChange={event => this.onInputChange(event.target.value)}/>
-                <div>
-                    Value of the input: {this.state.term}
+            <div>
+                <div className="search-bar-wrapper">
+                    <div className={"search-bar"}>
+                            <input
+                                value={this.state.term}
+                                onChange={event => this.onInputChange(event.target.value)}/>
+                    </div>
+                    <div className={"search-limit"}>
+                            <input
+                                value={this.state.maxResults}
+                                onChange={event => this.onLimitChange(event.target.value)}/>
+                    </div>
                 </div>
             </div>
         );
@@ -27,7 +38,11 @@ class SearchBar extends React.Component {
 
     onInputChange(term) {
         this.setState({term});
-        this.props.onSearchTermChange(term);
+        this.props.onSearchTermChange(term, this.state.maxResults);
+    }
+
+    onLimitChange(value) {
+        this.setState ({maxResults: value});
     }
 
 }
