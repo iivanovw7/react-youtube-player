@@ -1,31 +1,51 @@
+
+
 .search-bar-wrapper {
     margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    color: black;
+
 }
 
 .search-bar {
     margin-right: 10px;
     /* text-align: center; */
+
 }
 
 
 .search-bar input {
     width: 575px;
     border-radius: 5px;
+    text-align: center;
+    text-decoration: solid;
 }
 
 .search-limit input {
     width: 75px;
     border-radius: 5px;
+    text-align: center;
+    text-decoration: solid;
 }
 
 .video-detail .details {
-    margin-top: 10px;
+    margin: 15px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #85807a;
+    border-radius: 5px;
+    background-color: rgba(219, 214, 207, 0.2);
+    color: black;
+
+}
+
+.video-detail {
+
+    color: black;
+    padding: 5px;
+    margin: 15px;
+
 }
 
 .list-group-item {
@@ -35,3 +55,5 @@
 .list-group-item:hover {
     background-color: #eee;
 }
+
+

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-// { Component } the same as:  const Component = React.Component;
 
 
 class SearchBar extends React.Component {
@@ -10,7 +9,7 @@ class SearchBar extends React.Component {
 
         this.state = {
             term: '',
-            maxResults: 6
+            maxResults: 24
         }
 
 
@@ -21,6 +20,9 @@ class SearchBar extends React.Component {
         return (
             <div>
                 <div className="search-bar-wrapper">
+                    <div>
+                        <h2>Search:</h2>
+                    </div>
                     <div className={"search-bar"}>
                             <input
                                 value={this.state.term}
@@ -50,19 +52,3 @@ class SearchBar extends React.Component {
 
 export default SearchBar;
 
-
-/*
-
-class SearchBar extends React.Component {
-    render() {
-        return <input onChange={this.onInputChange}/>;
-    }
-
-
-    onInputChange(event) {
-        console.log(event);
-        //console.log(event.target.value);
-    }
-}
-
- */

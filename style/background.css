@@ -1,5 +1,5 @@
 html {
-  background: #0e1a25;
+  background: transparent;
   font-size: 0.625em; }
 
 .container {
@@ -14,19 +14,62 @@ html {
     width: 100%; }
 
 .container {
-  background-color: #88d8b0;
   padding: 10px;
   box-sizing: border-box; }
   .container__row {
-    background-color: #ffeead; }
+    background-color: rgba(219, 214, 207, 0.2);
+    border-radius: 10px; }
 
 .row-element {
-  width: 150px;
-  height: 30px;
-  background-color: #ff6f69;
+  width: 200px;
+  height: 200px;
   margin: 10px;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-around; }
+
+.row-element img, div {
+  margin: 0 auto; }
+
+.row-element div {
+  text-align: center;
+  color: black; }
+
+.row-element img {
+  width: 150px;
+  border-radius: 5px;
+  color: black; }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.gridElement {
+  -moz-animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+  animation: fadeIn 3s; }
 
 /*# sourceMappingURL=background.css.map */

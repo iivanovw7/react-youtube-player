@@ -1,10 +1,8 @@
-$background: hsl(210, 45, 10)
+$background: transparent
 
 html
   background: $background
   font-size: .625em // 10px for rems
-
-
 
 
 $grid__bp-md: 768
@@ -12,6 +10,7 @@ $grid__bp-md: 768
 .container
   max-width: $grid__bp-md * 1px
   margin: 0 auto
+
   &--fluid
     margin: 0
     max-width: 100%
@@ -23,19 +22,69 @@ $grid__bp-md: 768
 
 
 .container
-  background-color: #88d8b0
+
   padding: 10px
   box-sizing: border-box
   &__row
-    background-color: #ffeead
+    background-color: rgba(219, 214, 207, 0.2)
+    border-radius: 10px
 
 
 
 .row-element
-  width: 150px
-  height: 30px
-  background-color: #ff6f69
+  width: 200px
+  height: 200px
+
   margin: 10px
-  display: flex
+  display: grid
   align-items: center
   justify-content: space-around
+
+.row-element img, div
+  margin: 0 auto
+
+.row-element div
+  text-align: center
+  color: black
+
+.row-element img
+  width: 150px
+  border-radius: 5px
+  color: black
+
+
+$prefix:'-moz-', '-webkit-', '-o-', '-ms-', ''
+// ********************
+// fadeIn
+// ********************
+@mixin keyframe-fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-moz-keyframes fadeIn
+  @include keyframe-fadeIn
+
+@-webkit-keyframes fadeIn
+  @include keyframe-fadeIn
+
+@-o-keyframes fadeIn
+  @include keyframe-fadeIn
+
+@-ms-keyframes fadeIn
+  @include keyframe-fadeIn
+
+@keyframes fadeIn
+  @include keyframe-fadeIn
+
+@mixin fadeIn( $arg )
+  $keyframe-name:fadeIn
+  $duration:$arg
+  @each $p in $prefix
+    #{$p}animation: $keyframe-name $duration
+
+.gridElement
+  @include fadeIn( 3s )
+
+// e.g. @include fadeIn( 2s );

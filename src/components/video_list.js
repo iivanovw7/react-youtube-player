@@ -15,6 +15,7 @@ const VideoList = (props) => {
 
     return (
             <ul className="col-md-4 list-group">
+                <h4>Просмотренные: </h4>
                 { videoItems }
             </ul>
 

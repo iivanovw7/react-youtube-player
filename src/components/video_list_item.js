@@ -6,14 +6,6 @@ const VideoListItem = ({video, onVideoSelect}) => {
 
 
 
-/*
-ES5:
-const VideoListItem = (props) => {
-    const video = props.video;
-    const onVideoSelect = props.onVideoSelect;
- */
-
-
     return (
         <li onClick={() => onVideoSelect(video)} className={'list-group-item'}>
             <div className={'video-list media'}>

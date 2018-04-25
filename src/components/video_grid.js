@@ -6,7 +6,7 @@ const VideoGrid = (props) => {
     const videoItems = props.videos.map((video) => {
         return (
             <VideoGridItem
-                className="row-element"
+                onVideoSelect={props.onVideoSelect}
                 key={video.etag}
                 video={video} />
         );
@@ -21,18 +21,3 @@ const VideoGrid = (props) => {
 
 export default VideoGrid;
 
-/*
-
-<div className={"container"}>
-                    <div className="container__row">
-                        <div className="row-element">Row Element</div>
-                        <div className="row-element">Row Element</div>
-                        <div className="row-element">Row Element</div>
-                        <div className="row-element">Row Element</div>
-                        <div className="row-element">Row Element</div>
-                        <div className="row-element">Row Element</div>
-                        <div className="row-element">Row Element</div>
-                    </div>
-                </div>
-
- */

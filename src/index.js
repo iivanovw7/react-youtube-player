@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-//import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar.js';
 import VideoList from './components/video_list.js';
 import VideoDetail from './components/video_detail.js';
@@ -17,30 +16,18 @@ class App extends Component {
         this.state = {
             videos: [],
             selectedVideo: null,
+            viewed: []
 
 
         };
 
-        this.videoSearch('surfboards', 6);
-        //console.log(this.props.maxResults);
+        this.videoSearch('indie rock', 24);
+
 
     }
 
     videoSearch(term, maxResults) {
 
-        /*
-
-        fetchVideos({key: API_KEY, term: term, resultsPerPage: 10}, (videos) => {
-            this.setState({
-                videos: videos,
-                selectedVideo: videos[0]
-            });
-
-            // ES5 = this.setState({ videos: videos });
-            console.log(videos);
-        });
-
-         */
 
         fetchVideos({key: API_KEY, term: term, maxResults: maxResults}, (videos) => {
             this.setState({
@@ -48,7 +35,6 @@ class App extends Component {
                 selectedVideo: videos[0]
             });
 
-            // ES5 = this.setState({ videos: videos });
             console.log(videos);
         });
 
@@ -68,23 +54,15 @@ class App extends Component {
 
         return (
             <div>
+                <SearchBar onSearchTermChange={videoSearch}/>
+                <VideoDetail video={this.state.selectedVideo}/>
                 <VideoGrid
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                     videos={this.state.videos}/>
-                <SearchBar onSearchTermChange={videoSearch}/>
-                <VideoDetail video={this.state.selectedVideo}/>
+
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                     videos={this.state.videos}/>
-                <div className="container__row">
-                    <div className="row-element">Row Element</div>
-                    <div className="row-element">Row Element</div>
-                    <div className="row-element">Row Element</div>
-                    <div className="row-element">Row Element</div>
-                    <div className="row-element">Row Element</div>
-                    <div className="row-element">Row Element</div>
-                    <div className="row-element">Row Element</div>
-                </div>
             </div>
         );
     }
@@ -92,12 +70,3 @@ class App extends Component {
 
 ReactDOM.render(<App/>, document.querySelector('.container'));
 
-
-/*
-
- <div>
-                    <input
-                        value={this.state.maxResults}
-                        onChange={event => this.onInputChange(event.target.value)}/>
-                </div>
- */
