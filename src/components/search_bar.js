@@ -19,22 +19,22 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div>
-                <div className="search-bar-wrapper">
-                    <div>
-                        <h2>Search:</h2>
-                    </div>
-                    <div className={"search-bar"}>
+                    <div className={"search-input"}>
+                            <span className={"input-separator"}> Video search:</span>
                             <input
+                                placeholder="indie rock"
+                                className={"search-input-field"}
                                 value={this.state.term}
                                 onChange={event => this.onInputChange(event.target.value)}/>
-                    </div>
-                    <div className={"search-limit"}>
+                            <span className={"input-separator"}> | Results limit:</span>
                             <input
+                                placeholder="results limit"
+                                className={"search-limit-field"}
                                 value={this.state.maxResults}
                                 onChange={event => this.onLimitChange(event.target.value)}/>
                     </div>
-                </div>
             </div>
+
         );
     }
 

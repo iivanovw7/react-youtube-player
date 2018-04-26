@@ -7,7 +7,12 @@ const VideoGridItem = ({video, onVideoSelect}) => {
 
     return (
         <div
-            onClick={() => onVideoSelect(video)}
+            onClick={() => {
+                window.scrollTo(0, 0);
+                onVideoSelect(video)
+            }
+            }
+
             className="row-element">
                     <img className={"gridElement"} src={imageUrl}/>
                     <div className={"gridElement"}>{video.snippet.title}</div>

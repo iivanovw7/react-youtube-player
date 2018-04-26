@@ -1,9 +1,9 @@
 #mainWrapper {
-    background: linear-gradient(-45deg, #c16147, #b6315b, #217ca8, #1da582);
+    background: linear-gradient(-10deg, #70382e, #6c1c36, #194764, #114e39);
     background-size: 400% 400%;
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 15s ease infinite;
+    -webkit-animation: Gradient 20s ease infinite;
+    -moz-animation: Gradient 20s ease infinite;
+    animation: Gradient 20s ease infinite;
 }
 
 @-webkit-keyframes Gradient {

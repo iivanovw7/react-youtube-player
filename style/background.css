@@ -1,6 +1,12 @@
-html {
+h1, h2, #inputTitle {
+  font-family: "Arvo", sans-serif;
+  color: #E35865;
+  text-align: center; }
+
+html, body, #mainWrapper {
   background: transparent;
-  font-size: 0.625em; }
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em; }
 
 .container {
   max-width: 768px;
@@ -18,7 +24,8 @@ html {
   box-sizing: border-box; }
   .container__row {
     background-color: rgba(219, 214, 207, 0.2);
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 10px; }
 
 .row-element {
   width: 200px;
@@ -27,6 +34,9 @@ html {
   display: grid;
   align-items: center;
   justify-content: space-around; }
+
+.row-element:hover {
+  cursor: pointer; }
 
 .row-element img, div {
   margin: 0 auto; }
