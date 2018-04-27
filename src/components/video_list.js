@@ -3,19 +3,31 @@ import VideoListItem from './video_list_item.js';
 
 
 const VideoList = (props) => {
+    let rendered = 0;
+
+    function counter() {
+        return rendered++;
+    }
     const videoItems = props.videos.map((video) => {
-        return (
-            <VideoListItem
-                onVideoSelect={props.onVideoSelect}
-                key={video.etag}
-                video={video} />
-        );
+
+
+        if (rendered <= 2) {
+            return (
+                <VideoListItem
+                    onVideoSelect={props.onVideoSelect}
+                    key={video.etag}
+                    video={video}
+                    onshow={counter()}/>
+            );
+        }
+
+
 
     });
 
     return (
-            <ul className="col-md-4 list-group">
-                <h4>Просмотренные: </h4>
+            <ul className="list-group">
+                <h4>More videos: </h4>
                 { videoItems }
             </ul>
 

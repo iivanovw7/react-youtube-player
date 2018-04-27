@@ -5,74 +5,150 @@ button:focus {
     outline: none;
 }
 
-.search-bar-wrapper {
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: black;
+@media screen and (min-width: 0px) and (max-width: 1050px) {
+
+    .input-separator {
+        display: none;
+    }
+
+    .search-bar-wrapper {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: black;
+
+    }
+
+    .search-bar {
+        margin-right: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .search-input {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: solid;
+        border: solid 4px #E35865;
+        padding: 5px;
+        font-size: 20px;
+        color: #bbb;
+        background:none;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        font-family: 'Arvo', sans-serif;
+        line-height: 45px;
+        margin-bottom: 15px;
+
+    }
+
+    .search-input-field {
+        width: 375px;
+        text-align: center;
+        text-decoration: solid;
+        color: #bbb;
+        background:none;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        border: none;
+    }
+
+    .search-limit-field {
+        width: 75px;
+        text-align: center;
+        text-decoration: solid;
+        color: #bbb;
+        background:none;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        border: none;
+    }
+
 
 }
 
-.search-bar {
-    margin-right: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+@media screen and (min-width: 1050px) {
+
+    .search-bar-wrapper {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: black;
+
+    }
+
+    .search-bar {
+        margin-right: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .search-input {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: solid;
+        border: solid 3px #E35865;
+        padding: 5px;
+        font-size: 20px;
+        color: #bbb;
+        background:none;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        font-family: 'Arvo', sans-serif;
+        line-height: 45px;
+        margin-bottom: 15px;
+
+    }
+
+    .search-input-field {
+        width: 375px;
+        text-align: center;
+        text-decoration: solid;
+        color: #bbb;
+        background:none;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        border: none;
+    }
+
+    .search-limit-field {
+        width: 75px;
+        text-align: center;
+        text-decoration: solid;
+        color: #bbb;
+        background:none;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        border: none;
+    }
+
+    .input-separator {
+        text-decoration: solid;
+        color: #E35865;
+        vertical-align: super;
+        font-weight: 700;
+        font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+
 }
 
-.search-input {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    width: 100%;
-    border-radius: 0px;
-    text-align: center;
-    text-decoration: solid;
-    border: solid 5px #E35865;
-    padding: 5px;
-    font-size: 20px;
-    color: #bbb;
-    background:none;
-    letter-spacing: 1px;
-    word-spacing: 10px;
-    font-family: 'Arvo', sans-serif;
-    line-height: 45px;
-    margin-bottom: 15px;
-
-}
-
-.search-input-field {
-    width: 375px;
-    text-align: center;
-    text-decoration: solid;
-    color: #bbb;
-    background:none;
-    letter-spacing: 1px;
-    word-spacing: 10px;
-    border: none;
-}
-
-.search-limit-field {
-    width: 75px;
-    text-align: center;
-    text-decoration: solid;
-    color: #bbb;
-    background:none;
-    letter-spacing: 1px;
-    word-spacing: 10px;
-    border: none;
-}
-
-.input-separator {
-    text-decoration: solid;
-    color: #E35865;
-    vertical-align: super;
-    font-weight: 700;
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
-}
 
 
 .video-detail .details {
@@ -97,8 +173,14 @@ button:focus {
     cursor: pointer;
 }
 
+.list-group h4 {
+    color: #bbb;
+}
+
+
 .list-group-item:hover {
     background-color: #eee;
 }
+
 
 
