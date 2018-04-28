@@ -1,3 +1,6 @@
+.row {
+  margin-bottom: 15px; }
+
 h1, h2, #inputTitle {
   font-family: "Arvo", sans-serif;
   color: #E35865;
@@ -7,6 +10,12 @@ html, body, #mainWrapper {
   background: transparent;
   font-family: "Montserrat", sans-serif;
   font-size: 1.1em; }
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
 
 .container {
   max-width: 768px;
@@ -44,7 +53,7 @@ html, body, #mainWrapper {
 
 .row-element div {
   text-align: center;
-  color: black; }
+  color: #bbb; }
 
 .row-element img {
   width: 150px;

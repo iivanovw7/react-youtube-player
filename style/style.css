@@ -36,7 +36,7 @@ button:focus {
         border-radius: 5px;
         text-align: center;
         text-decoration: solid;
-        border: solid 4px #E35865;
+        border: solid 5px #E35865;
         padding: 5px;
         font-size: 20px;
         color: #bbb;
@@ -157,7 +157,7 @@ button:focus {
     border: 1px solid #85807a;
     border-radius: 5px;
     background-color: rgba(219, 214, 207, 0.2);
-    color: black;
+    color: #bbb;
 
 }
 
@@ -182,5 +182,8 @@ button:focus {
     background-color: #eee;
 }
 
+.sweet-loading {
+    margin: 200px;
+}
 
 

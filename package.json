@@ -31,8 +31,10 @@
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-loading-spinner": "^1.0.12",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
+    "react-spinners": "^0.3.2",
     "redux": "^3.0.4",
     "youtube-api-search": "0.0.5"
   }

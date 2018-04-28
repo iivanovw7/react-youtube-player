@@ -11,7 +11,7 @@ const VideoList = (props) => {
     const videoItems = props.videos.map((video) => {
 
 
-        if (rendered <= 2) {
+        if (rendered <= 3) {
             return (
                 <VideoListItem
                     onVideoSelect={props.onVideoSelect}
