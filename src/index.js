@@ -7,11 +7,15 @@ import VideoDetail from './components/video_detail.js';
 import VideoGrid from './components/video_grid.js';
 import { fetchVideos } from './functions/searchApi.js';
 import { PacmanLoader } from 'react-spinners';
+import * as screenfull from 'screenfull';
+
+
 
 const API_KEY = 'AIzaSyAeE-Lg0cs2_SEcDwppbxvOeOg0vm0Y3-o';
 
 
 class App extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -22,10 +26,10 @@ class App extends Component {
             size: 60,
             fullScreen: false,
 
-
         };
 
         this.videoSearch('indie rock', 24);
+
 
 
     }
@@ -48,8 +52,8 @@ class App extends Component {
 
 
 
-
     componentDidMount() {
+
 
 
         setTimeout(() => {
@@ -58,13 +62,17 @@ class App extends Component {
             })
         }, 2000);
 
-    }
 
-    toggle() {
-        this.setState({
-            fullScreen: !this.state.fullScreen
+        const el = document.getElementById('viewPort');
+
+        document.getElementById('fs-doc-button').addEventListener('click', () => {
+            if (screenfull.enabled) {
+                screenfull.request(el);
+            }
         });
     }
+
+
 
 
     render() {
@@ -81,6 +89,10 @@ class App extends Component {
         };
 
 
+
+
+
+
         return (
 
             <div>
@@ -95,10 +107,11 @@ class App extends Component {
                 <div style={content}>
                     <SearchBar onSearchTermChange={videoSearch}/>
                     <div className="row">
-                        <div className="col-sm-8">
+                        <div className="col-sm-8" id={'viewPort'}>
                             <VideoDetail video={this.state.selectedVideo}/>
                         </div>
                         <div className="col-sm-4">
+                            <button id="fs-doc-button">Go Fullscreen</button>
                             <VideoList
                                 onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                                 videos={this.state.videos}/>
@@ -107,12 +120,15 @@ class App extends Component {
                     <VideoGrid
                         onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                         videos={this.state.videos}/>
-
                 </div>
 
             </div>
         );
+
+
     }
+
+
 }
 
 ReactDOM.render(<App/>, document.querySelector('.container'));

@@ -42,3 +42,34 @@
     }
 }
 
+#viewPort:-moz-full-screen {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+
+}
+
+#viewPort:-webkit-full-screen {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+
+#viewPort:fullscreen {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#fs-doc-button {
+    margin-bottom: 10px;
+}
+
