@@ -16,6 +16,7 @@ class SearchBar extends React.Component {
     }
 
 
+
     render() {
         return (
             <div>
@@ -44,6 +45,7 @@ class SearchBar extends React.Component {
     }
 
     onLimitChange(value) {
+
         this.setState ({maxResults: value});
     }
 

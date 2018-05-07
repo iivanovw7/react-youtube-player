@@ -34,6 +34,8 @@ class App extends Component {
 
     }
 
+
+
     videoSearch(term, maxResults) {
 
 
@@ -117,6 +119,7 @@ class App extends Component {
                                 videos={this.state.videos}/>
                         </div>
                     </div>
+                    <h4 className={"headerH4"}>Search results: </h4>
                     <VideoGrid
                         onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                         videos={this.state.videos}/>
