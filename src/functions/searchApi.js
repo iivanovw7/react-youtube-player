@@ -39,35 +39,5 @@ export function fetchVideos(options, callback) {
         });
 };
 
-/*
 
-
-let params = {
-        part: 'snippet',
-        key: options.key,
-        q: options.term,
-        type: 'video',
-        maxResults: options.maxResults
-    };
-
-    if (options.maxResults <= 0) {
-        params = {
-            part: 'snippet',
-            key: options.key,
-            q: options.term,
-            type: 'video',
-            maxResults: 1
-        };
-    } else if (options.maxResults >= 50) {
-        params = {
-            part: 'snippet',
-            key: options.key,
-            q: options.term,
-            type: 'video',
-            maxResults: 50
-        };
-    }
-
-
- */
 
