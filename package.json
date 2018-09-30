@@ -27,9 +27,12 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
+    "react-apollo": "^2.1.9",
     "react-dom": "^0.14.3",
     "react-loading-spinner": "^1.0.12",
     "react-redux": "4.3.0",

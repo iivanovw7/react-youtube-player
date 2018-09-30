@@ -10,8 +10,7 @@ import { PacmanLoader } from 'react-spinners';
 import * as screenfull from 'screenfull';
 
 
-
-const API_KEY = 'AIzaSyAeE-Lg0cs2_SEcDwppbxvOeOg0vm0Y3-o';
+const API_KEY = 'AIzaSyBtdp0YqDgLETF-BHFz8aissWxgQiTEYUs';
 
 
 class App extends Component {
@@ -29,7 +28,6 @@ class App extends Component {
         };
 
         this.videoSearch('indie rock', 24);
-
 
 
     }
@@ -78,6 +76,7 @@ class App extends Component {
 
 
     render() {
+
         const videoSearch = _.debounce((term, maxResults) => {
             this.videoSearch(term, maxResults)
         }, 300);
@@ -89,9 +88,6 @@ class App extends Component {
         let loader = {
             display: this.state.loading ? "block" : "none"
         };
-
-
-
 
 
 
